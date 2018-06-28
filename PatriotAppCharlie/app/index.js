@@ -18,4 +18,4 @@ EStyleSheet.build({
 
 });
 
-export default () => <Profile />;
+export default () => <Test />;

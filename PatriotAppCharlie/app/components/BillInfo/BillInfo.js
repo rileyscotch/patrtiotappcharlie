@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
-import GetInfo from '../GetInfo'
+
 const getUrl = 'https://api.propublica.org/congress/v1/senate/votes/recent.json'
 // const propublicaK = require(process.env.API_KEY) 
 const options = {
@@ -39,31 +39,38 @@ function voteSummary({
 }
 
 class BillInfo extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: {}
+        }
+    }
     componentDidMount() {
-        // console.log('I WORK BITCHES')
-        // fetch(getUrl, options)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         // console.warn('Data from API', response)
-        //         console.log(data.results.votes[0].vote_uri)
-        //         let freshUrl = data.results.votes[0].vote_uri
-        //         fetch(freshUrl, options)
-        //             .then(response => response.json())
-        //             .then(data => billSummary(data)
-
-        //             )
-        //         console.log(billSummary)
-        //     })
-        //     .catch(function (error) {
-        //         console.log('ERROR BRAH ' + error)
-        //         throw error
-        //     })
-        GetInfo()
+        console.log('I WORK BITCHES')
+        fetch(getUrl, options)
+            .then(response => response.json())
+            .then(data => {
+                // console.warn('Data from API', response)
+                console.log(data.results.votes[0].vote_uri)
+                let freshUrl = data.results.votes[0].vote_uri
+                fetch(freshUrl, options)
+                    .then(response => response.json())
+                    .then(data => this.setState({data: billSummary(data)})
+                    // .then(this.setState({data: billSummary}))
+                    )
+                console.log(billSummary)
+            })
+            .catch(function (error) {
+                console.log('ERROR BRAH ' + error)
+                throw error
+            })
     }
     render() {
         return ( 
             <View>
-            <Text> Bill Info! </Text> 
+            <Text>{this.state.data.billId}</Text> 
+            <Text>{this.state.data.billDescription}</Text>
+            <Text></Text>
             </View>
         )
     }

@@ -12,7 +12,6 @@ class Test extends Component {
         return(
     <Container>
             <BillInfo />
-
     </Container>
         )
     }

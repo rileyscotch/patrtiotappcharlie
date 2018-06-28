@@ -4,7 +4,7 @@ import { Text, TouchableOpacity, TouchableHighlight, TextInput, View } from 'rea
 
 import styles from './styles'
 
-const BillBin = ({ billId, billDescription, billText, billResult }) => (
+const BillBin = ({ onPress, billText, billResult }) => (
     <View style={styles.container}>
         <TouchableHighlight style={styles.container} >
             <Text style={styles.buttonText}>{billText}</Text>

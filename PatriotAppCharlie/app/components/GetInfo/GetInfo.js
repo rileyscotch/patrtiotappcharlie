@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
 const getUrl = 'https://api.propublica.org/congress/v1/senate/votes/recent.json'
@@ -15,7 +15,7 @@ function billSummary({ results }) {
         congressId: vote.congress,
         sessionId: vote.session,
         rollCallId: vote.roll_call,
-        billId: vote.bill.number,
+        billId: vote.bill.bill_id,
         billDescription: vote.description,
         voteResult: vote.result,
         summary: voteSummary(vote)
@@ -38,7 +38,9 @@ function voteSummary({
     }, {})
 }
 
-export const GetInfo = () => {
+class GetInfo extends Component {
+    componentDidMount() {
+        console.log('I WORK BITCHES')
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
@@ -57,5 +59,13 @@ export const GetInfo = () => {
                 throw error
             })
     }
-    
+    render() {
+        return ( 
+            <View>
+            <Text> Get That Info! </Text> 
+            </View>
+        )
+    }
+}
 
+export default GetInfo
