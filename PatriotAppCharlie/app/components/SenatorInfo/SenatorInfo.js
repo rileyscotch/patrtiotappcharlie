@@ -38,7 +38,7 @@ function voteSummary({
     }, {})
 }
 
-class BillInfo extends Component {
+class SenatorInfo extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -50,7 +50,6 @@ class BillInfo extends Component {
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
-                // console.warn('Data from API', response)
                 console.log(data.results.votes[0].vote_uri)
                 let freshUrl = data.results.votes[0].vote_uri
                 return fetch(freshUrl, options)
@@ -74,4 +73,4 @@ class BillInfo extends Component {
     }
 }
 
-export default BillInfo
+export default SenatorInfo

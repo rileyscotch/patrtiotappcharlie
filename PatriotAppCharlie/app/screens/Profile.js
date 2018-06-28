@@ -13,7 +13,6 @@ class Profile extends Component {
         return(
     <Container>
         <SenBin senatorName={'Senator 1'} vote={'Yes'} />
-        <SenBin senatorName={'Senator 2'} vote={'No'}/>
         <BillInfo />   
     </Container>
         )
