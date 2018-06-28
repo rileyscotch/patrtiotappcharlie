@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
+import styles from './styles'
 
 const getUrl = 'https://api.propublica.org/congress/v1/senate/votes/recent.json'
 // const propublicaK = require(process.env.API_KEY) 
@@ -15,7 +16,7 @@ function billSummary({ results }) {
         congressId: vote.congress,
         sessionId: vote.session,
         rollCallId: vote.roll_call,
-        billId: vote.bill.bill_id,
+        billId: vote.bill.number,
         billDescription: vote.description,
         voteResult: vote.result,
         summary: voteSummary(vote)
@@ -56,7 +57,6 @@ class BillInfo extends Component {
                 fetch(freshUrl, options)
                     .then(response => response.json())
                     .then(data => this.setState({data: billSummary(data)})
-                    // .then(this.setState({data: billSummary}))
                     )
                 console.log(billSummary)
             })
@@ -67,10 +67,10 @@ class BillInfo extends Component {
     }
     render() {
         return ( 
-            <View>
-            <Text>{this.state.data.billId}</Text> 
-            <Text>{this.state.data.billDescription}</Text>
-            <Text></Text>
+            <View style={styles.containerBill}>
+            <Text style={styles.nameText}>{this.state.data.billId}</Text> 
+            <Text style={styles.summaryText}>{this.state.data.billDescription}</Text>
+            <Text style={styles.resultText}>{this.state.data.voteResult}</Text>
             </View>
         )
     }

@@ -14,7 +14,6 @@ class Profile extends Component {
     <Container>
         <SenBin senatorName={'Senator 1'} vote={'Yes'} />
         <SenBin senatorName={'Senator 2'} vote={'No'}/>
-        <BillBin billText={'Bill Summary'} billResult={'Failed'} />
         <BillInfo />   
     </Container>
         )
