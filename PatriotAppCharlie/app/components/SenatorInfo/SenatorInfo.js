@@ -65,24 +65,15 @@ class SenatorInfo extends Component {
             })
     }
     render() {        
-    //     {if (this.state.userState=='') {
-    //     return( 
-    //     <StatePicker />
-    //     )
-    //     }
-    //     else{
-    //     return ( 
-    
-    //     )
-    // }}
+        console.log(Object.keys(this.state.data.summary))
         return ( 
           
             <View style={styles.containerBill}>
             <Text style={styles.summaryText}>{this.state.data.billDescription}</Text>
             <Text style={styles.resultText}>{this.state.data.voteResult}</Text>
-            {this.state.summary && this.state.summary[this.state.pickerSelection] && <ViewVote 
-            senators={ Object.keys(this.state.summary[this.state.pickerSelection]) } 
-            votes={ this.state.summary[this.state.pickerSelection] }/> }
+            {this.state.data.summary && this.state.data.summary[this.state.pickerSelection] && <ViewVote 
+            senators={ Object.keys(this.state.data.summary[this.state.pickerSelection]) } 
+            votes={ this.state.data.summary[this.state.pickerSelection] }/> }
             </View>
             
    
