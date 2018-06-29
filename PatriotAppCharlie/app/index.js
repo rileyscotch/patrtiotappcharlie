@@ -12,10 +12,10 @@ EStyleSheet.build({
   $medBlue: '#2e598f',
   $navyBlue: '#0c2141',
   $democratBlue: '#44bdf3',
-  $republicanRed: '	#d40000',
+  $republicanRed: '#d40000',
 
-  outline: 1,
+  // outline: 1,
 
 });
 
-export default () => <Profile />;
+export default () => <Test />;

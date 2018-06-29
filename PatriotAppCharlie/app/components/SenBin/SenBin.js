@@ -6,8 +6,8 @@ import styles from './styles'
 
 const SenBin  = ({ onPress, senatorName, vote }) => (
     <View style={styles.container}>
-        <Text style={styles.buttonText}>{senatorName}</Text>
-        <Text style={styles.buttonText}>{vote}</Text>
+        <Text style={styles.buttonText}>Corey 'Dickface' Gardner</Text>
+        <Text style={styles.buttonText}>Voted Like a Bitch</Text>
     </View>
 )
 

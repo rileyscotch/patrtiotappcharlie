@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import styles from './styles'
+import ViewVote from './ViewVote'
+import Container from '../Container'
+import StatePicker from '../StatePicker'
 
 
 const getUrl = 'https://api.propublica.org/congress/v1/senate/votes/recent.json'
@@ -22,13 +25,12 @@ function billSummary({ results }) {
         voteResult: vote.result,
         summary: voteSummary(vote)
     }
+    console.log('Log 0', JSON.stringify(objectVote.summary.CO))
     console.log('Log 1', objectVote)
     return objectVote
 }
 
-function voteSummary({
-    positions
-}) {
+function voteSummary({ positions }) {
     return positions.reduce((summary, senator) => {
         if (!summary[senator.state]) {
             summary[senator.state] = {}
@@ -42,7 +44,8 @@ class SenatorInfo extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: { summary: {} }
+            data: { summary: {} },
+            pickerSelection: ''
         }
     }
     componentDidMount() {
@@ -50,7 +53,6 @@ class SenatorInfo extends Component {
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
-                console.log(data.results.votes[0].vote_uri)
                 let freshUrl = data.results.votes[0].vote_uri
                 return fetch(freshUrl, options)
                     .then(response => response.json())
@@ -62,15 +64,33 @@ class SenatorInfo extends Component {
                 throw error
             })
     }
-    render() {
+    render() {        
+    //     {if (this.state.userState=='') {
+    //     return( 
+    //     <StatePicker />
+    //     )
+    //     }
+    //     else{
+    //     return ( 
+    
+    //     )
+    // }}
         return ( 
+          
             <View style={styles.containerBill}>
-            <Text style={styles.nameText}>{this.state.data.billId}</Text> 
             <Text style={styles.summaryText}>{this.state.data.billDescription}</Text>
             <Text style={styles.resultText}>{this.state.data.voteResult}</Text>
+            <ViewVote 
+            senators={ Object.keys(this.state.summary[this.state.pickerSelection]) } 
+            votes={ this.state.summary[this.state.pickerSelection] }/> 
             </View>
-        )
+            
+   
+           
+    )
+
     }
+
 }
 
 export default SenatorInfo

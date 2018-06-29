@@ -12,7 +12,7 @@ export default EStyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '$democratBlue',
         width: '100%',
-        height: '25%',
+        height: '20%',
         borderRadius: BORDER_RADIUS,
     },
 

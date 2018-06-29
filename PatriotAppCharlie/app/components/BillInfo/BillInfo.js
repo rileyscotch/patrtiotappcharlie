@@ -22,6 +22,7 @@ function billSummary({ results }) {
         voteResult: vote.result,
         summary: voteSummary(vote)
     }
+    console.log('Log 0', objectVote.summary.CO)
     console.log('Log 1', objectVote)
     return objectVote
 }
@@ -47,10 +48,10 @@ class BillInfo extends Component {
     }
     componentDidMount() {
         console.log('I WORK BITCHES')
+        // this.props.setSenators()
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
-                // console.warn('Data from API', response)
                 console.log(data.results.votes[0].vote_uri)
                 let freshUrl = data.results.votes[0].vote_uri
                 return fetch(freshUrl, options)
@@ -63,6 +64,8 @@ class BillInfo extends Component {
                 throw error
             })
     }
+    // setSenators = () => {this.props.setSenators()}
+    
     render() {
         return ( 
             <View style={styles.containerBill}>
