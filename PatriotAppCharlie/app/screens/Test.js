@@ -8,6 +8,7 @@ import { BillInfo } from '../components/BillInfo'
 import { StatePicker } from '../components/StatePicker'
 import { SenBin } from '../components/SenBin';
 import SenatorInfo from '../components/SenatorInfo/SenatorInfo';
+import ViewVote from '../components/SenatorInfo/ViewVote'
 
 class Test extends Component {
 

@@ -45,7 +45,7 @@ class SenatorInfo extends Component {
         super(props)
         this.state = {
             data: { summary: {} },
-            pickerSelection: ''
+            pickerSelection: 'CO'
         }
     }
     componentDidMount() {
@@ -80,9 +80,9 @@ class SenatorInfo extends Component {
             <View style={styles.containerBill}>
             <Text style={styles.summaryText}>{this.state.data.billDescription}</Text>
             <Text style={styles.resultText}>{this.state.data.voteResult}</Text>
-            <ViewVote 
+            {this.state.summary && this.state.summary[this.state.pickerSelection] && <ViewVote 
             senators={ Object.keys(this.state.summary[this.state.pickerSelection]) } 
-            votes={ this.state.summary[this.state.pickerSelection] }/> 
+            votes={ this.state.summary[this.state.pickerSelection] }/> }
             </View>
             
    
