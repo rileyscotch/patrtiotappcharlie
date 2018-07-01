@@ -4,20 +4,20 @@ import styles from './styles'
 
 
 class StatePicker extends Component {
-constructor(props) {
-    super(props)
-    this.state = {
-        pickerSelection: 'DC'
-    }
-}
+// constructor(props) {
+//     super(props)
+//     this.state = {
+//         pickerSelection: 'DC'
+//     }
+// }
     render() {
         return (
 <View style={styles.container}>
-<Text>You Live In { this.state.pickerSelection } right?</Text>
+<Text>You Live In { this.props.currentState } right?</Text>
 <Picker
-selectedValue={this.state.pickerSelection}
+selectedValue={this.props.currentState}
 style={styles.picker}
-onValueChange={(itemValue, itemIndex) => this.setState({pickerSelection: itemValue})}>
+onValueChange={(itemValue) => this.props.updateUserState(itemValue)}>
     <Picker.Item label="AK" value="AK" />
     <Picker.Item label="AL" value="AL" />
     <Picker.Item label="AR" value="AR" />

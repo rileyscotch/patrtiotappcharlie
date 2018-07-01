@@ -3,8 +3,6 @@ import { StatusBar, KeyboardAvoidingView } from 'react-native';
 
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo'
-import { BillBin } from '../components/BillBin'
-import { SenBin } from '../components/SenBin'
 import { BillInfo } from '../components/BillInfo';
 
 

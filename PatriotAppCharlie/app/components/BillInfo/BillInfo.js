@@ -22,8 +22,6 @@ function billSummary({ results }) {
         voteResult: vote.result,
         summary: voteSummary(vote)
     }
-    console.log('Log 0', objectVote.summary.CO)
-    console.log('Log 1', objectVote)
     return objectVote
 }
 
@@ -47,12 +45,11 @@ class BillInfo extends Component {
         }
     }
     componentDidMount() {
-        console.log('I WORK BITCHES')
-        // this.props.setSenators()
+        // console.log('I WORK BITCHES')
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
-                console.log(data.results.votes[0].vote_uri)
+                // console.log(data.results.votes[0].vote_uri)
                 let freshUrl = data.results.votes[0].vote_uri
                 return fetch(freshUrl, options)
                     .then(response => response.json())

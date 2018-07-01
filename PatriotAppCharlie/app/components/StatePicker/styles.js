@@ -9,7 +9,7 @@ export default EStyleSheet.create({
          right: 0, 
          height: 50, 
          width: 100,
-         borderRadius: 10,
+         borderRadius: 50,
          
         },
     container: {
@@ -20,7 +20,7 @@ export default EStyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '$democratBlue',
         width: '100%',
-        height: '12%',
+        height: '15%',
         }
     
 
