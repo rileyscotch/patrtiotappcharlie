@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StatusBar, KeyboardAvoidingView } from "react-native";
 import { Actions } from 'react-native-router-flux'
 
-import { Container } from "../components/Container";
+import { MyContainer } from "../components/MyContainer";
 import { Logo } from "../components/Logo";
 import { ProfileButton } from "../components/Profile";
 
@@ -10,7 +10,7 @@ class Home extends Component {
   
   render() {
     return (
-      <Container>
+      <MyContainer>
         <StatusBar translucent={false} barStyle="light-content" />
         <Logo />
         <ProfileButton
@@ -21,7 +21,7 @@ class Home extends Component {
           buttonText={"Log In"}
           onPress={() => Actions.test()}
         />
-      </Container>
+      </MyContainer>
     );
   }
 }

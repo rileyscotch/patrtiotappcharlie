@@ -1,7 +1,6 @@
 import React, { PropTypes } from "react";
 import {
   Text,
-  TouchableOpacity,
   TouchableHighlight,
   TextInput,
   View

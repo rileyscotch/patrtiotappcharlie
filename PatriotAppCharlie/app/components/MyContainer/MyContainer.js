@@ -4,14 +4,14 @@ import { View } from 'react-native';
 
 import styles from './styles';
 
-const Container = ({ children }) => (
+const MyContainer = ({ children }) => (
   <View style={styles.container}>
     {children}
   </View>
 );
 
-Container.propTypes = {
+MyContainer.propTypes = {
   children: PropTypes.any,
 };
 
-export default Container;
+export default MyContainer;

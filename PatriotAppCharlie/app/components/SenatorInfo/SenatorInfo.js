@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, View } from "react-native";
 import styles from "./styles";
 import ViewVote from "./ViewVote";
-import Container from "../Container";
+import MyContainer from "../MyContainer";
 import StatePicker from "../StatePicker";
 
 const getUrl =
