@@ -4,70 +4,64 @@ import styles from './styles'
 
 
 class StatePicker extends Component {
-// constructor(props) {
-//     super(props)
-//     this.state = {
-//         pickerSelection: 'DC'
-//     }
-// }
     render() {
         return (
 <View style={styles.container}>
-<Text>You Live In { this.props.currentState } right?</Text>
+<Text style={styles.selectText}>Select Your State</Text>
 <Picker
 selectedValue={this.props.currentState}
 style={styles.picker}
 onValueChange={(itemValue) => this.props.updateUserState(itemValue)}>
-    <Picker.Item label="AK" value="AK" />
-    <Picker.Item label="AL" value="AL" />
-    <Picker.Item label="AR" value="AR" />
-    <Picker.Item label="AZ" value="AZ" />
-    <Picker.Item label="CA" value="CA" />
-    <Picker.Item label="CO" value="CO" />
-    <Picker.Item label="CT" value="CT" />
-    <Picker.Item label="DE" value="DE" />
-    <Picker.Item label="FL" value="FL" />
-    <Picker.Item label="GA" value="GA" />
-    <Picker.Item label="HI" value="HI" />
-    <Picker.Item label="IA" value="IA" />
-    <Picker.Item label="ID" value="ID" />
-    <Picker.Item label="IL" value="IL" />
-    <Picker.Item label="IN" value="IN" />
-    <Picker.Item label="KS" value="KS" />
-    <Picker.Item label="KY" value="KY" />
-    <Picker.Item label="LA" value="LA" />
-    <Picker.Item label="MA" value="MA" />
-    <Picker.Item label="MD" value="MD" />
-    <Picker.Item label="ME" value="ME" />
-    <Picker.Item label="MI" value="MI" />
-    <Picker.Item label="MN" value="MN" />
-    <Picker.Item label="MO" value="MO" />
-    <Picker.Item label="MS" value="MS" />
-    <Picker.Item label="MT" value="MT" />
-    <Picker.Item label="NC" value="NC" />
-    <Picker.Item label="ND" value="ND" />
-    <Picker.Item label="NE" value="NE" />
-    <Picker.Item label="NH" value="NH" />
-    <Picker.Item label="NJ" value="NJ" />
-    <Picker.Item label="NM" value="NM" />
-    <Picker.Item label="NV" value="NV" />
-    <Picker.Item label="NY" value="NY" />
-    <Picker.Item label="OH" value="OH" />
-    <Picker.Item label="OK" value="OK" />
-    <Picker.Item label="OR" value="OR" />
-    <Picker.Item label="PA" value="PA" />
-    <Picker.Item label="RI" value="RI" />
-    <Picker.Item label="SC" value="SC" />
-    <Picker.Item label="SD" value="SD" />
-    <Picker.Item label="TN" value="TN" />
-    <Picker.Item label="TX" value="TX" />
-    <Picker.Item label="UT" value="UT" />
-    <Picker.Item label="VA" value="VA" />
-    <Picker.Item label="VT" value="VT" />
-    <Picker.Item label="WA" value="WA" />
-    <Picker.Item label="WI" value="WI" />
-    <Picker.Item label="WV" value="WV" />
-    <Picker.Item label="WY" value="WY" />
+    <Picker.Item label="Alaska" value="AK" />
+    <Picker.Item label="Alabama" value="AL" />
+    <Picker.Item label="Arkansas" value="AR" />
+    <Picker.Item label="Arizona" value="AZ" />
+    <Picker.Item label="California" value="CA" />
+    <Picker.Item label="Colorado" value="CO" />
+    <Picker.Item label="Connecticut" value="CT" />
+    <Picker.Item label="Delaware" value="DE" />
+    <Picker.Item label="Florida" value="FL" />
+    <Picker.Item label="Georgia" value="GA" />
+    <Picker.Item label="Hawaii" value="HI" />
+    <Picker.Item label="Iowa" value="IA" />
+    <Picker.Item label="Idaho" value="ID" />
+    <Picker.Item label="Illinois" value="IL" />
+    <Picker.Item label="Indiana" value="IN" />
+    <Picker.Item label="Kansas" value="KS" />
+    <Picker.Item label="Kentucky" value="KY" />
+    <Picker.Item label="Louisiana" value="LA" />
+    <Picker.Item label="Maine" value="MA" />
+    <Picker.Item label="Maryland" value="MD" />
+    <Picker.Item label="Massachusetts" value="ME" />
+    <Picker.Item label="Michigan" value="MI" />
+    <Picker.Item label="Minnesota" value="MN" />
+    <Picker.Item label="Mississippi" value="MS" />
+    <Picker.Item label="Missouri" value="MO" />
+    <Picker.Item label="Montana" value="MT" />
+    <Picker.Item label="Nebraska" value="NE" />
+    <Picker.Item label="Nevada" value="NV" />
+    <Picker.Item label="New Hampshire" value="NH" />
+    <Picker.Item label="New Jerysey" value="NJ" />    
+    <Picker.Item label="New Mexico" value="NM" />
+    <Picker.Item label="New York" value="NY" />
+    <Picker.Item label="North Carolina" value="NC" />
+    <Picker.Item label="North Dakota" value="ND" />
+    <Picker.Item label="Ohio" value="OH" />
+    <Picker.Item label="Oklahoma" value="OK" />
+    <Picker.Item label="Oregon" value="OR" />
+    <Picker.Item label="Pennsylvania" value="PA" />
+    <Picker.Item label="Rhode Island" value="RI" />
+    <Picker.Item label="South Carolina" value="SC" />
+    <Picker.Item label="South Dakota" value="SD" />
+    <Picker.Item label="Tennessee" value="TN" />
+    <Picker.Item label="Texas" value="TX" />
+    <Picker.Item label="Utah" value="UT" />
+    <Picker.Item label="Vermont" value="VT" />
+    <Picker.Item label="Virginia" value="VA" />
+    <Picker.Item label="Washington" value="WA" />
+    <Picker.Item label="West Virginia" value="WV" />
+    <Picker.Item label="Wisconsin" value="WI" />
+    <Picker.Item label="Wyoming" value="WY" />
 </Picker>
 
 </View>

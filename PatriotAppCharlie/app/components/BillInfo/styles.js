@@ -1,16 +1,14 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const INPUT_HEIGHT = 48;
-const BORDER_RADIUS = 4; 
-
 export default EStyleSheet.create({
     containerBill: {
         flex: 0,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '$white',
-        width: '100%',
+        backgroundColor: '$snowWhite',
+        width: '90%',
         height: '65%',
+        borderRadius: 5,
         
     },
     nameText: {

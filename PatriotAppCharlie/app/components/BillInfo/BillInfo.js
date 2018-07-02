@@ -49,7 +49,6 @@ class BillInfo extends Component {
         fetch(getUrl, options)
             .then(response => response.json())
             .then(data => {
-                // console.log(data.results.votes[0].vote_uri)
                 let freshUrl = data.results.votes[0].vote_uri
                 return fetch(freshUrl, options)
                     .then(response => response.json())
@@ -61,10 +60,10 @@ class BillInfo extends Component {
                 throw error
             })
     }
-    // setSenators = () => {this.props.setSenators()}
     
     render() {
-        return ( 
+        return (
+             
             <View style={styles.containerBill}>
             <Text style={styles.nameText}>{this.state.data.billId}</Text> 
             <Text style={styles.summaryText}>{this.state.data.billDescription}</Text>

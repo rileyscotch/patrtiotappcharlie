@@ -1,21 +1,21 @@
 import EStyleSheet from "react-native-extended-stylesheet";
 
 export default EStyleSheet.create({
-  container: {
-    flex: -1,
-    alignItems: "flex-start",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "$democratBlue",
-    width: "100%",
-    height: "35%"
-  },
-  buttonText: {
-    textAlign: 'center',
+  senatorText: {
+    textAlign: "center",
     fontWeight: "600",
-    fontSize: 30,
-    color: "$navyBlue"
+    fontSize: 20,
+    color: "$navyBlue",
+    // height: "100%",
+
   },
-  border: {}
+  containerBill: {
+    flex: 0,
+    justifyContent: "space-around",
+    // alignItems: "center",
+    backgroundColor: "$snowWhite",
+    width: "90%",
+    height: "25%",
+    borderRadius: 5
+  }
 });
