@@ -1,33 +1,15 @@
 import React, { Component } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-  Button
-} from "react-native";
 import EStyleSheet from "react-native-extended-stylesheet";
+import { Input } from "react-native-elements";
 
 import { Container } from "../components/Container";
 import { ProfileButton } from "../components/Profile";
 
 class SignUp extends Component {
-
   render() {
     return (
       <Container>
-        <TextInput
-          onChangeText={value => this.onChangeText("email", value)}
-          style={styles.container}
-          placeholder="Email"
-        />
-        <TextInput
-          onChangeText={value => this.onChangeText("password", value)}
-          style={styles.container}
-          secureTextEntry={true}
-          placeholder="Password"
-        />
+        <Input placeholder="BASIC INPUT" />
         <ProfileButton title="Sign In" buttonText={"Sign Up"} />
       </Container>
     );
