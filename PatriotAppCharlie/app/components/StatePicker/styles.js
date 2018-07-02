@@ -7,8 +7,8 @@ export default EStyleSheet.create({
     // left: 0,
     // right: 0,
     // height: 50,
-    width: 100,
-    borderRadius: 50
+    width: 150,
+    borderRadius: 5,
   },
   container: {
     flex: -1,

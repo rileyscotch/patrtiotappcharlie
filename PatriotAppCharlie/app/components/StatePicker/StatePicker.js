@@ -9,6 +9,7 @@ class StatePicker extends Component {
 <View style={styles.container}>
 <Text style={styles.selectText}>Select Your State</Text>
 <Picker
+mode={'dropdown'}
 selectedValue={this.props.currentState}
 style={styles.picker}
 onValueChange={(itemValue) => this.props.updateUserState(itemValue)}>

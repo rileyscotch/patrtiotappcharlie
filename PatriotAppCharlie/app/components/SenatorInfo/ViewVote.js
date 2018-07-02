@@ -4,7 +4,7 @@ import styles from './styles'
 
 const ViewVote = ({ senators, votes }) => {
   return (
-    <View style={styles.containerBill}>
+    <React.Fragment>
       {senators.map(senator => {
         return (
           <Text style={styles.senatorText}>
@@ -12,7 +12,7 @@ const ViewVote = ({ senators, votes }) => {
           </Text>
         );
       })}
-    </View>
+    </React.Fragment>
   );
 };
 

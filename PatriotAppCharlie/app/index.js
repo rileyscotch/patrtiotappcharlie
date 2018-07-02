@@ -9,7 +9,7 @@ export default () => (
   <Router>
     <Scene key="root">
       <Scene key="login" component={Home} title="Welcome" initial />
-      <Scene key="test" component={Test} title="Information" />
+      <Scene key="test" component={Test} title="Information" hideNavBar={true}/>
     </Scene>
   </Router>
 );

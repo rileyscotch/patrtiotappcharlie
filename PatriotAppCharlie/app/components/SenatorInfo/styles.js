@@ -4,18 +4,20 @@ export default EStyleSheet.create({
   senatorText: {
     textAlign: "center",
     fontWeight: "600",
-    fontSize: 20,
+    fontSize: 30,
     color: "$navyBlue",
-    // height: "100%",
-
   },
   containerBill: {
     flex: 0,
     justifyContent: "space-around",
-    // alignItems: "center",
+    alignItems: "center",
     backgroundColor: "$snowWhite",
-    width: "90%",
+    width: "100%",
     height: "25%",
-    borderRadius: 5
+    borderRadius: 5,
+    borderBottomWidth: 5,
+    borderTopWidth: 2.5,
+    borderColor: '#000000',
+
   }
 });

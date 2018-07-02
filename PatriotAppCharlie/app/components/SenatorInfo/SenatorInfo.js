@@ -64,7 +64,6 @@ class SenatorInfo extends Component {
       });
   }
   render() {
-    // console.log(Object.keys(this.state.data.summary));
     return (
       <View style={styles.containerBill}>
         {this.state.data.summary &&
