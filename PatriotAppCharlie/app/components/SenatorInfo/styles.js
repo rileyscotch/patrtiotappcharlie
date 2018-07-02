@@ -15,7 +15,7 @@ export default EStyleSheet.create({
     width: "100%",
     height: "25%",
     borderRadius: 5,
-    borderBottomWidth: 5,
+    borderBottomWidth: 2.5,
     borderTopWidth: 2.5,
     borderColor: '#000000',
 
