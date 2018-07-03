@@ -7,7 +7,7 @@ const ViewVote = ({ senators, votes }) => {
     <React.Fragment>
       {senators.map(senator => {
         return (
-          <Text style={styles.senatorText}>
+          <Text key={senator} style={styles.senatorText}>
             {senator}: {votes[senator]}
           </Text>
         );

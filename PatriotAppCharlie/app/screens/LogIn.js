@@ -28,15 +28,23 @@ class LogIn extends Component {
   logInUser = (email, password) => {
     try {
       firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(function(user) {
-        console.log(user)
+      .then((user) => {
+          console.log('Current User', user)
+          Actions.test()
+          return user;
       })
+      // .then((firebaseUser) => {
+      //   firebase.auth().onAuthStateChanged(function(firebaseUser) {
+      //     if (user) {
+      //       Actions.test()
+      //     }
+      //   });
+      // })
     }
     catch(error) {
       console.log('Oh no brah: ', error)
     }
-    
-  };
+  }
   render() {
     return (
       <Container style={styles.container}>
