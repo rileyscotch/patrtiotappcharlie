@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import styles from "./styles";
 import ViewVote from "./ViewVote";
-import MyContainer from "../MyContainer";
-import StatePicker from "../StatePicker";
+import { API_KEY } from 'react-native-dotenv'
 
-const getUrl =
-  "https://api.propublica.org/congress/v1/senate/votes/recent.json";
-// const propublicaK = require(process.env.API_KEY)
+const getUrl = "https://api.propublica.org/congress/v1/senate/votes/recent.json";
 const options = {
   headers: new Headers({
-    "X-API-Key": "AF8fj6nmBqoyVcRzQ8OCDsRL7IMXQyXCoSDbbkF3"
+    "X-API-Key": API_KEY
   })
 };
+
 
 function billSummary({ results }) {
   const { vote } = results.votes;
@@ -25,8 +23,6 @@ function billSummary({ results }) {
     voteResult: vote.result,
     summary: voteSummary(vote)
   };
-  // console.log("Log 0", JSON.stringify(objectVote.summary.CO));
-  // console.log("Log 1", objectVote);
   return objectVote;
 }
 
@@ -49,7 +45,6 @@ class SenatorInfo extends Component {
     };
   }
   componentDidMount() {
-    // console.log("I WORK BITCHES");
     fetch(getUrl, options)
       .then(response => response.json())
       .then(data => {

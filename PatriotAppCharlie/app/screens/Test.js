@@ -12,7 +12,7 @@ class Test extends Component {
   };
   render() {
     return (
-      <MyContainer>
+      <MyContainer style={{padding: 10}}>
         <BillInfo />
         <SenatorInfo currentState={this.state.userState} />
         <StatePicker

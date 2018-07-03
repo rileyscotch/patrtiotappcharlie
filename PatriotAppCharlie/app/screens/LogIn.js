@@ -34,13 +34,6 @@ class LogIn extends Component {
           Actions.test();
           return user;
         });
-      // .then((firebaseUser) => {
-      //   firebase.auth().onAuthStateChanged(function(firebaseUser) {
-      //     if (user) {
-      //       Actions.test()
-      //     }
-      //   });
-      // })
     } catch (error) {
       console.log("Oh no brah: ", error);
     }
@@ -81,7 +74,6 @@ class LogIn extends Component {
 
 export default LogIn;
 
-const INPUT_HEIGHT = 48;
 const styles = EStyleSheet.create({
   input: {
     height: 50,

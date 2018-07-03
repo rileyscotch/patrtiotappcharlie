@@ -1,16 +1,11 @@
 import React, { PropTypes } from "react";
-import {
-  Text,
-  TouchableHighlight,
-  TextInput,
-  View
-} from "react-native";
+import { Text, TouchableHighlight, TextInput, View } from "react-native";
 
 import styles from "./styles";
 
 const ProfileButton = ({ onPress, buttonText }) => (
   <TouchableHighlight
-    activeOpacity={.5}
+    activeOpacity={0.5}
     underlayColor={"#f1f1f1"}
     style={styles.container}
     onPress={onPress}
