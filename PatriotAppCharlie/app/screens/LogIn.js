@@ -15,7 +15,6 @@ import {
 } from "native-base";
 import * as firebase from "firebase";
 
-
 class LogIn extends Component {
   constructor(props) {
     super(props);
@@ -27,12 +26,14 @@ class LogIn extends Component {
 
   logInUser = (email, password) => {
     try {
-      firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((user) => {
-          console.log('Current User', user)
-          Actions.test()
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then(user => {
+          console.log("Current User", user);
+          Actions.test();
           return user;
-      })
+        });
       // .then((firebaseUser) => {
       //   firebase.auth().onAuthStateChanged(function(firebaseUser) {
       //     if (user) {
@@ -40,11 +41,10 @@ class LogIn extends Component {
       //     }
       //   });
       // })
+    } catch (error) {
+      console.log("Oh no brah: ", error);
     }
-    catch(error) {
-      console.log('Oh no brah: ', error)
-    }
-  }
+  };
   render() {
     return (
       <Container style={styles.container}>

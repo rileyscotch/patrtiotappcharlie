@@ -2,8 +2,8 @@ import EStyleSheet from "react-native-extended-stylesheet";
 
 export default EStyleSheet.create({
   picker: {
-    backgroundColor: "$snowWhite",
-    width: 150,
+    backgroundColor: "#fafafa",
+    width: 150
   },
   container: {
     flex: 0,

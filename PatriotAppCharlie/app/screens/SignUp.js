@@ -14,7 +14,7 @@ import {
   Label
 } from "native-base";
 import * as firebase from "firebase";
-
+import { KeyboardAvoidingView } from "react-native";
 
 class SignUp extends Component {
   constructor(props) {
@@ -26,19 +26,17 @@ class SignUp extends Component {
   }
 
   signUpUser = (email, password) => {
-    try{
-      if(this.state.password.length<8){
-        alert('Password Must be at Least 8 Characters')
-        return
+    try {
+      if (this.state.password.length < 8) {
+        alert("Password Must be at Least 8 Characters");
+        return;
       }
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-    }
-    catch(error){
-      console.log('Error brah: ', error)
+      firebase.auth().createUserWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.log("Error brah: ", error);
     }
   };
 
-  logInUser = (email, password) => {};
   render() {
     return (
       <Container style={styles.container}>

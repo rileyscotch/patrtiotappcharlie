@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { Actions } from "react-native-router-flux";
 import EStyleSheet from "react-native-extended-stylesheet";
-import { Home } from './Home'
+import { Home } from "./Home";
 
 export default class Splash extends Component {
   componentDidMount() {
@@ -37,8 +37,8 @@ const styles = EStyleSheet.create({
   splashPage: {
     flex: 1,
     backgroundColor: "$primaryBlue",
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
   splashLogo: {
     width: imageWidth,

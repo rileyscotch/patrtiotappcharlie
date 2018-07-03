@@ -1,7 +1,4 @@
 import App from "./app/index";
-import Amplify, { Auth } from "aws-amplify";
-import config from "./aws-exports";
-import { withAuthenticator } from "aws-amplify-react-native";
 import * as firebase from "firebase";
 
 const firebaseConfig = {
@@ -14,9 +11,5 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-Amplify.configure(config);
-
-// export default withAuthenticator(App, true);
 
 export default App;

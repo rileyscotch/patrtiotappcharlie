@@ -11,8 +11,7 @@ export default EStyleSheet.create({
     width: "100%",
     height: INPUT_HEIGHT,
     borderRadius: BORDER_RADIUS,
-    marginVertical: 11,
-    
+    marginVertical: 11
   },
   buttonText: {
     fontWeight: "600",
