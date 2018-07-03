@@ -8,7 +8,7 @@ export default EStyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "$snowWhite",
-    width: "90%",
+    width: "100%",
     height: INPUT_HEIGHT,
     borderRadius: BORDER_RADIUS,
     marginVertical: 11,

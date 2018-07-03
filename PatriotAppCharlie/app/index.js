@@ -6,14 +6,16 @@ import Home from "./screens/Home";
 import Test from "./screens/Test";
 import SignUp from './screens/SignUp';
 import Splash from './screens/Splash'
+import LogIn from './screens/LogIn';
 
 export default () => (
   <Router>
     <Scene key="root">
-      <Scene key="splash" component={Splash} initial />
-      <Scene key="login" component={Home} title="Welcome" />
+      <Scene key="splash" component={Splash} initial={true} hideNavBar={true} />
+      <Scene key="home" component={Home} hideNavBar={true}/>
+      <Scene key="login" component={LogIn} title="Log In" />
       <Scene key="signup" component={SignUp} title="Creat an Account" />
-      <Scene key="test" component={Test} title="Information" hideNavBar={true}/>
+      <Scene key="test" component={Test} hideNavBar={true}/>
     </Scene>
   </Router>
 );

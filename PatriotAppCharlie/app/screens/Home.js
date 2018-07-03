@@ -19,7 +19,7 @@ class Home extends Component {
         />
         <ProfileButton
           buttonText={"Log In"}
-          onPress={() => Actions.test()}
+          onPress={() => Actions.login()}
         />
       </MyContainer>
     );

@@ -16,7 +16,7 @@ import {
 import * as firebase from "firebase";
 
 
-class SignUp extends Component {
+class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,20 +25,18 @@ class SignUp extends Component {
     };
   }
 
-  signUpUser = (email, password) => {
-    try{
-      if(this.state.password.length<8){
-        alert('Password Must be at Least 8 Characters')
-        return
-      }
-      firebase.auth().createUserWithEmailAndPassword(email, password)
+  logInUser = (email, password) => {
+    try {
+      firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(function(user) {
+        console.log(user)
+      })
     }
-    catch(error){
-      console.log('Error brah: ', error)
+    catch(error) {
+      console.log('Oh no brah: ', error)
     }
+    
   };
-
-  logInUser = (email, password) => {};
   render() {
     return (
       <Container style={styles.container}>
@@ -62,9 +60,9 @@ class SignUp extends Component {
           </Item>
           <ProfileButton
             title="Sign In"
-            buttonText={"Sign Up"}
+            buttonText={"Log In"}
             onPress={() =>
-              this.signUpUser(this.state.email, this.state.password)
+              this.logInUser(this.state.email, this.state.password)
             }
           />
         </Form>
@@ -73,7 +71,7 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default LogIn;
 
 const INPUT_HEIGHT = 48;
 const styles = EStyleSheet.create({

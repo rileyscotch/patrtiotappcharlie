@@ -17,7 +17,7 @@ import { Home } from './Home'
 export default class Splash extends Component {
   componentDidMount() {
     setTimeout(() => {
-      Actions.login();
+      Actions.home();
     }, 2000);
   }
 
