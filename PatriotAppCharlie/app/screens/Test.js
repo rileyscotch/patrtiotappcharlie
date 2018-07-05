@@ -8,7 +8,7 @@ import { ScrollView } from "react-native";
 import { ProfileButton } from "../components/Profile";
 
 class Test extends Component {
-  state = { userState: "AK" };
+  state = { userState: "AL" };
   updateUserState = chosenState => {
     this.setState({ userState: chosenState });
   };

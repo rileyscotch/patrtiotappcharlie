@@ -30,6 +30,7 @@ class SignUp extends Component {
         alert("Password Must be at Least 8 Characters");
         return;
       }
+      alert('Success! Welcom to the Front Lines!')
       firebase.auth().createUserWithEmailAndPassword(email, password);
     } catch (error) {
       console.log("Error brah: ", error);

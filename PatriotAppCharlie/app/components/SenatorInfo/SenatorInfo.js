@@ -41,7 +41,7 @@ class SenatorInfo extends Component {
     super(props);
     this.state = {
       data: { summary: {} },
-      currentState: "AK"
+      currentState: "AL"
     };
   }
   componentDidMount() {
