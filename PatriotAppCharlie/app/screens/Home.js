@@ -9,7 +9,7 @@ import { ProfileButton } from "../components/Profile";
 class Home extends Component {
   render() {
     return (
-      <MyContainer>
+      <MyContainer padding={10}>
         <StatusBar translucent={false} barStyle="light-content" />
         <Logo />
         <ProfileButton

@@ -13,7 +13,7 @@ export default EStyleSheet.create({
     justifyContent: "center",
     backgroundColor: "$snowWhite",
     width: "100%",
-    height: "15%",
+    height: "15%"
   },
   selectText: {
     color: "$red",

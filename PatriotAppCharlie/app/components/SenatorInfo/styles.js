@@ -5,7 +5,7 @@ export default EStyleSheet.create({
     textAlign: "center",
     fontWeight: "600",
     fontSize: 30,
-    color: "$navyBlue",
+    color: "$navyBlue"
   },
   containerBill: {
     // flex: 0,
@@ -13,6 +13,6 @@ export default EStyleSheet.create({
     alignItems: "center",
     backgroundColor: "$snowWhite",
     width: "100%",
-    height: "25%",
+    height: "25%"
   }
 });

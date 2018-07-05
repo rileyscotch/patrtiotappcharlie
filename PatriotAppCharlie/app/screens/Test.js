@@ -5,8 +5,7 @@ import { StatePicker } from "../components/StatePicker";
 import SenatorInfo from "../components/SenatorInfo/SenatorInfo";
 import { Actions } from "react-native-router-flux";
 import { ScrollView } from "react-native";
-import { ProfileButton } from "../components/Profile"
-
+import { ProfileButton } from "../components/Profile";
 
 class Test extends Component {
   state = { userState: "AK" };
@@ -15,12 +14,14 @@ class Test extends Component {
   };
   render() {
     return (
-      <ScrollView contentContainerStyle={{
-        flexGrow: 1,
-        justifyContent: "space-between",
-        padding: 10,
-        backgroundColor: "#a4b6c1",
-      }}>
+      <ScrollView
+        contentContainerStyle={{
+          flexGrow: 1,
+          justifyContent: "space-between",
+          padding: 10,
+          backgroundColor: "#a4b6c1"
+        }}
+      >
         <BillInfo />
         <SenatorInfo currentState={this.state.userState} />
         <StatePicker
@@ -28,11 +29,10 @@ class Test extends Component {
           updateUserState={this.updateUserState}
         />
         <ProfileButton
-        title="Save This"
-            buttonText={"Save This"}
-            onPress={() =>
-              Actions.next()
-            } />
+          title="Save This"
+          buttonText={"Save This"}
+          onPress={() => Actions.next()}
+        />
       </ScrollView>
     );
   }
