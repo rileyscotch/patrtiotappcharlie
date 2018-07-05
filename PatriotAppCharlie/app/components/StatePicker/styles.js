@@ -14,7 +14,6 @@ export default EStyleSheet.create({
     backgroundColor: "$snowWhite",
     width: "100%",
     height: "15%",
-    borderRadius: 5,
   },
   selectText: {
     color: "$red",

@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
-import { Picker, View, Text, Modal } from 'react-native'
+import { Picker } from 'react-native'
+import { Card, Text } from "native-base";
 import styles from './styles'
 
 
 class StatePicker extends Component {
     render() {
         return (
-<View style={styles.container}>
+<Card style={styles.container}>
 <Text style={styles.selectText}>Select Your State</Text>
 <Picker
 mode={'dialog'}
 selectedValue={this.props.currentState}
 style={styles.picker}
 onValueChange={(itemValue) => this.props.updateUserState(itemValue)}>
-    <Picker.Item label="Alaska" value="AK" />
     <Picker.Item label="Alabama" value="AL" />
+    <Picker.Item label="Alaska" value="AK" />
     <Picker.Item label="Arkansas" value="AR" />
     <Picker.Item label="Arizona" value="AZ" />
     <Picker.Item label="California" value="CA" />
@@ -65,7 +66,7 @@ onValueChange={(itemValue) => this.props.updateUserState(itemValue)}>
     <Picker.Item label="Wyoming" value="WY" />
 </Picker>
 
-</View>
+</Card>
         )
     }
 }

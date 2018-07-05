@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { Card } from "native-base";
 import styles from "./styles";
 import ViewVote from "./ViewVote";
 import { API_KEY } from 'react-native-dotenv'
@@ -60,7 +60,7 @@ class SenatorInfo extends Component {
   }
   render() {
     return (
-      <View style={styles.containerBill}>
+      <Card style={styles.containerBill}>
         {this.state.data.summary &&
           this.state.data.summary[this.props.currentState] && (
             <ViewVote
@@ -70,7 +70,7 @@ class SenatorInfo extends Component {
               votes={this.state.data.summary[this.props.currentState]}
             />
           )}
-      </View>
+      </Card>
     );
   }
 }

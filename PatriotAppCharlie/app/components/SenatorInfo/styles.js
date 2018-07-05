@@ -8,12 +8,11 @@ export default EStyleSheet.create({
     color: "$navyBlue",
   },
   containerBill: {
-    flex: 0,
+    // flex: 0,
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "$snowWhite",
     width: "100%",
     height: "25%",
-    borderRadius: 5,
   }
 });

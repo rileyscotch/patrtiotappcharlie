@@ -33,5 +33,5 @@ EStyleSheet.build({
   $democratBlue: "#44bdf3",
   $republicanRed: "#d40000",
 
-  outline: 1
+  // outline: 1
 });
