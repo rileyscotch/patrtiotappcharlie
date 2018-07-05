@@ -14,7 +14,6 @@ import {
   Label
 } from "native-base";
 import * as firebase from "firebase";
-import { KeyboardAvoidingView } from "react-native";
 
 class SignUp extends Component {
   constructor(props) {

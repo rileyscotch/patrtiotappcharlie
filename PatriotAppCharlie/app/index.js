@@ -8,6 +8,7 @@ import Test from "./screens/Test";
 import SignUp from "./screens/SignUp";
 import Splash from "./screens/Splash";
 import LogIn from "./screens/LogIn";
+import Next from "./screens/Next";
 
 export default () => (
   <Router>
@@ -16,7 +17,8 @@ export default () => (
       <Scene key="home" component={Home} hideNavBar={true} />
       <Scene key="login" component={LogIn} title="Log In" />
       <Scene key="signup" component={SignUp} title="Creat an Account" />
-      <Scene key="test" component={Test} hideNavBar={true} />
+      <Scene key="test" component={Test} title="Most Recent Vote" />
+      <Scene key="next" component={Next} title="Saved" />
     </Scene>
   </Router>
 );
@@ -29,7 +31,7 @@ EStyleSheet.build({
   $medBlue: "#2e598f",
   $navyBlue: "#0c2141",
   $democratBlue: "#44bdf3",
-  $republicanRed: "#d40000"
+  $republicanRed: "#d40000",
 
-  // outline: 1
+  outline: 1
 });

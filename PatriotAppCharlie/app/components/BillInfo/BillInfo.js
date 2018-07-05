@@ -1,7 +1,15 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
 import styles from "./styles";
 import { API_KEY } from 'react-native-dotenv'
+import {
+  Container,
+  Header,
+  Content,
+  Card,
+  CardItem,
+  Body,
+  Text
+} from "native-base";
 
 const getUrl = "https://api.propublica.org/congress/v1/senate/votes/recent.json";
 const options = {
@@ -58,13 +66,13 @@ class BillInfo extends Component {
 
   render() {
     return (
-      <View style={styles.containerBill}>
+      <Card style={styles.containerBill}>
         <Text style={styles.nameText}>{this.state.data.billId}</Text>
         <Text style={styles.summaryText}>
           {this.state.data.billDescription}
         </Text>
         <Text style={styles.resultText}>{this.state.data.voteResult}</Text>
-      </View>
+      </Card>
     );
   }
 }
