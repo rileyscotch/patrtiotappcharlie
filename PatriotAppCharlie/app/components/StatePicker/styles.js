@@ -15,9 +15,6 @@ export default EStyleSheet.create({
     width: "100%",
     height: "15%",
     borderRadius: 5,
-    borderTopWidth: 2.5,
-    borderBottomWidth: 5,
-    borderColor: "#000000"
   },
   selectText: {
     color: "$red",
